@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="es-ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Summit | Agendarse</title>
+    <link rel="canonical" href="https://summittrampolinepark.com.uy/Agendarse.html">
+    <meta property="og:url" content="https://summittrampolinepark.com.uy/Agendarse.html">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Summit, Trampoline Park, Trampolines, Diversión, Parque de Trampolines, Aventura, Familia, Actividades, Uruguay">
+    <meta name="description" content="Summit Trampoline Park Uruguay ofrece una experiencia de diversión única con trampolines, actividades para todas las edades y un ambiente seguro y emocionante. ¡Visítanos hoy!">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body><nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="Inicio.html">
+            <img src="assets/img/Summit-Logo-full-white.png" width="195" height="90" />
+        </a>
+        <button class="navbar-toggler" id="menuToggle">
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="Inicio.html">Inicio</a></li>
+                <li class="nav-item"><a id="nav-second" class="nav-link active" href="About.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="Actividades.html">Actividades</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">SERVICIOS</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Cumpleaños_Regular.html">Cumpleaños Regular</a>
+                        <a class="dropdown-item" href="Cumpleaños_Premium.html">Cumpleaños Premium</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="Agendarse.html">Agendarse</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Menú lateral -->
+<div id="sideMenu" class="side-menu">
+    <button id="closeMenu" class="close-menu">&times;</button>
+    <ul class="menu-list">
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="About.html">Sobre Nosotros</a></li>
+        <li><a href="Actividades.html">Actividades</a></li>
+        <li class="has-submenu">
+            <a href="#">Servicios <i class="fas fa-angle-down arrow"></i></a>
+            <ul class="submenu">
+                <li><a href="Cumpleaños_Regular.html">Cumpleaños Regular</a></li>
+                <li><a href="Cumpleaños_Premium.html">Cumpleaños Premium</a></li>
+            </ul>
+        </li>        
+        <li><a href="Agendarse.html">Agendarse</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+</div>
+
+<div class="overlay"></div>
+
+    <section id="seccion1_agenda" class="seccion">
+        <div class="contenedor">
+            <div id="row-agendar" class="row g-4">
+                <div id="form-agendar">
+                    <div class="card text-light bg-dark shadow-sm">
+                        <div class="card-header text-white bg-primary">
+                            <h3 class="text-start mb-0">RESERVÁ TU LUGAR</h3>
+                        </div>
+                        <div class="card-body text-start">
+                            <form id="form-agenda" class="form-agenda">
+                                <div class="form-group"><input class="form-control form-control" type="text" id="Nombre" maxlength="50" minlength="2" pattern="[A-Za-zÀ-ÿ\s]+" placeholder="Nombre" required="" title="Solo letras y espacios"></div>
+                                <div class="form-group"><input class="form-control form-control" type="text" id="Apellido" maxlength="50" minlength="2" pattern="[A-Za-zÀ-ÿ\s]+" placeholder="Apellido" required="" title="Solo letras y espacios"></div>
+                                <div class="form-group"><input class="form-control form-control" type="text" id="Cedula" maxlength="12" minlength="8" pattern="\d+" placeholder="Cédula (Sin puntos ni guiones)" required="" title="Solo números"></div>
+                                <div class="form-group"><input class="form-control form-control" type="tel" id="Telefono" maxlength="9" minlength="9" pattern="^\d{9}$" placeholder="Teléfono" required="" title="Solo números (máximo 9 dígitos)"></div>
+                                <div class="form-group"><input class="form-control form-control" type="email" id="Email" maxlength="100" placeholder="Email" required="" title="Introduce una dirección de correo válida"></div>
+                                <div class="form-group"><label class="form-label form-label" for="fecha">Fecha y Hora:</label><input class="form-control form-control" type="text" id="fecha" placeholder="Fecha y Hora" readonly=""></div><label class="form-label form-label" for="calendario">Selecciona una fecha y hora para Reservar:</label>
+                                <div class="form-group">
+                                    <div id="calendario"></div>
+                                </div><button class="btn btn-primary" id="btn-agenda" type="submit">Agendar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="seccion2_agenda">
+        <div class="contenedor-contacto-otros">
+            <div class="contacto-mail"><img src="assets/img/istockphoto-1125279178-612x612.png" alt="Logo de email"><a href="mailto:info@summittrampolineparkuruguay.com" target="_blank">
+                    <p>info@summittrampolineparkuruguay.com</p>
+                </a></div>
+            <div class="contacto-whatsapp"><img src="assets/img/png-clipart-whatsapp-computer-icons-whatsapp-text-whatsapp-icon-thumbnail.png" alt="Logo de WhatsApp"><a href="https://wa.me/59897104037" target="_blank">
+                    <p>097 104 037</p>
+                </a></div>
+            <div class="contacto-telefono"><img src="assets/img/png-clipart-phone-phone-thumbnail.png" alt="Logo de teléfono"><a href="tel:25049901" target="_blank">
+                    <p>2 504 99 01</p>
+                </a></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Acerca de Nosotros</h4>
+                <p>Con sede en Estados Unidos, SUMMIT Trampoline Parks son las principales instalaciones de trampolines en el mundo, que ofrecen diversión y ejercicio para personas de todas las edades. Con nuevas instalaciones y parques de diseño personalizado, les resultará difícil encontrar una experiencia en cualquier otro lugar como la que ofrece SUMMIT.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="Inicio.html">Inicio</a></li>
+                    <li><a href="About.html" target="_blank">Sobre Nosotros</a></li>
+                    <li><a href="Actividades.html">Actividades</a></li>
+                    <li><a href="Cumpleaños_Regular.html">Cumpleaños Regular</a></li>
+                    <li><a href="Cumpleaños_Premium.html">Cumpleaños Premium</a></li>
+                    <li><a href="Agendarse.html" target="_blank">Agendarse</a></li>
+                    <li><a href="Contacto.html" target="_blank">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Síguenos</h4>
+                <div class="social-links"><a href="https://www.facebook.com/summitmontevideo/" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/summitmontevideo/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 SUMMIT Uruguay. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Calendario_agendarse.js"></script>
+    <script src="assets/js/Navbar.js"></script>
+    <script src="assets/js/Validacion.js"></script>
+</body>
+
+</html>

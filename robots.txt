@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /Confirmacion_reserva.html
+
+User-agent: *
+Disallow: /Editar_reserva.html
